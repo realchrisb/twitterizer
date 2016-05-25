@@ -43,7 +43,7 @@
         
         [noVowel insertString:letter atIndex:i];
         
-        if (<#condition#>) {
+        if ([letter isEqualToString: @"a"] || @"e" || @"i" || @"o" || @"u")]) {
             <#statements#>
         } else {
             <#statements#>
