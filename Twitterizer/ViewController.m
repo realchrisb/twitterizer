@@ -14,6 +14,7 @@
 @end
 
 @implementation ViewController
+
 - (IBAction)twitterize:(id)sender {
     /*NSString *vowels = self.textView.text;
     NSMutableString *noVowel = [[NSMutableString alloc] init];
@@ -32,13 +33,21 @@
 
     }*/
     
+    NSString *tweet = self.textView.text;
     NSString *vowels = @"aeiouàèìòùáéíóúäëïöü";
     NSMutableString *noVowel = [[NSMutableString alloc] init];
     
-    for (int i = 0; i == vowels.length; i++) {
-        char character = [vowels characterAtIndex:vowels.length - 1 - i];
+    for (int i = 0; i == tweet.length; i++) {
+        char character = [tweet characterAtIndex:i];
         NSString *letter = [NSString stringWithFormat:@"%c", character];
+        
         [noVowel insertString:letter atIndex:i];
+        
+        if (<#condition#>) {
+            <#statements#>
+        } else {
+            <#statements#>
+        }
     }
 }
     
