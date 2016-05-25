@@ -15,16 +15,33 @@
 
 @implementation ViewController
 - (IBAction)twitterize:(id)sender {
-    NSString *vowels = self.textView.text;
+    /*NSString *vowels = self.textView.text;
     NSMutableString *noVowel = [[NSMutableString alloc] init];
     
-    if ([char character [vowels characterAtUIndex:vowels.length]]) {
-        <#statements#>
+    for (int i = 0; i == vowels.length; i++) {
+        char character = [vowels characterAtIndex:vowels.length-1-i];
+        NSString *letter = [NSString stringWithFormat:@"%c", character];
         
-    } else {
-        <#statements#>
-    }
+        
+        if ([([letter  isEqual: @"a"]) || @"e" || @"i" || @"u" || @"o")]) {
+            
+            
+        } else {
+            <#statements#>
+        }
 
+    }*/
+    
+    NSString *vowels = @"aeiouàèìòùáéíóúäëïöü";
+    NSMutableString *noVowel = [[NSMutableString alloc] init];
+    
+    for (int i = 0; i == vowels.length; i++) {
+        char character = [vowels characterAtIndex:vowels.length - 1 - i];
+        NSString *letter = [NSString stringWithFormat:@"%c", character];
+        [noVowel insertString:letter atIndex:i];
+    }
+}
+    
     
     
 - (void)viewDidLoad {
